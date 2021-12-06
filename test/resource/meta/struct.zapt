@@ -10,7 +10,7 @@
 // Struct for {{parent.label}}
 typedef struct _{{asType parent.label}} {
 {{/first}}
-{{ident}}{{asUnderlyingType type}} {{asSymbol label}};{{#if struct_item_contains_nested_array}}// <- has nested array{{/if}} {{#if isNullable}}// NULLABLE {{/if}} {{#if isFabricSensitive}}// FABRIC SENSITIVE {{/if}}
+{{ident}}{{asUnderlyingType type}} {{asSymbol label}};{{#if struct_item_contains_nested_array}}// <- has nested array{{/if}} {{#if isNullable}}// NULLABLE {{/if}} {{#if isFabricSensitive}}// FABRIC SENSITIVE {{/if}} {{#if struct_is_fabric_scoped}}// Is fabric_scroped, fabric index field label: {{ struct_fabric_idx_field }} {{/if}}
 {{#last}}
 } {{asType parent.label}};
 
