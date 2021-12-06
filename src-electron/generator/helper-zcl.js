@@ -119,7 +119,7 @@ async function zcl_structs(options) {
       if (i.isArray) {
         st.struct_contains_array = true
       }
-      if (i.type.toLowerCase() == 'fabric_idx') {
+      if (i.type && i.type.toLowerCase() == 'fabric_idx') {
         st.struct_is_fabric_scoped = true
         st.struct_fabric_idx_field = i.label
       }
