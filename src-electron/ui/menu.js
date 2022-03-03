@@ -354,21 +354,22 @@ function showMenu(httpPort) {
   Menu.setApplicationMenu(menu)
 }
 
-function hideMenu(httpPort) {
-  Menu.setApplicationMenu(null)
-}
+// function hideMenu(httpPort) {
+//   Menu.setApplicationMenu(null)
+// }
 /**
  * Toggling of menu
  *
  * @param {*} port
  */
-function toggleMenu(httpPort) {
+function toggleMenu(window) {
   menuIsShown = !menuIsShown
-  if (!menuIsShown) {
-    hideMenu(httpPort)
-  } else {
-    showMenu(httpPort)
-  }
+  window.setMenuBarVisibility(menuIsShown)
+  // if (!menuIsShown) {
+  //   hideMenu(httpPort)
+  // } else {
+  //   showMenu(httpPort)
+  // }
 }
 
 /**
